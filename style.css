@@ -1,6 +1,4 @@
 *{
-  /*margin: 10px;
-  padding: 10px;*/
   font-family: Quicksand, Helvetica, sans-serif;
 }
 
@@ -8,6 +6,11 @@ form{
   background-color: #d3f0ec;
 }
 
+h1{
+  margin: 10px;
+  padding: 50px;
+  text-align: center;
+}
 
 h3{
   /*background-color: #ddf7cb;*/
