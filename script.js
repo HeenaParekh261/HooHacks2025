@@ -1,5 +1,5 @@
 //hello this is openai api vibes
-const OpenAI = require("openai");
+/*const OpenAI = require("openai");
 require("dotenv").config();
 
 const openai = new OpenAI({
@@ -19,4 +19,37 @@ exports.chatReq = async (req, res) => {
     } catch (err) {
       res.status(500).json(err.message);
     }
-  };
+  };*/
+
+const express = require("express");
+const cors = require("cors");
+const bodyParser = require("body-parser");
+//const { Configuration, OpenAIApi } = require("openai");
+const OpenAI = require("openai"); 
+
+const app = express();
+const port = 3000;
+
+app.use(cors()); // Allow frontend requests
+app.use(bodyParser.json());
+
+const openai = new OpenAI({ apiKey: "API_KEY" });
+
+
+app.post("/chat", async (req, res) => {
+    try {
+        const { message } = req.body;
+        const response = await openai.chat.completions.create({
+            model: "gpt-3.5-turbo",
+            messages: [{ role: "user", content: message }],
+        });
+
+        res.status(200).json(response.data);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
+
+app.listen(port, () => {
+    console.log(`Server running on http://localhost:${port}`);
+});
