@@ -26,17 +26,21 @@
       <h3> Below, you can choose from a list of reminders, or make your own, and set their frequency.</h3>
     
       <form>
-        <h4> Question 1</h4>
-        <input type="checkbox" id="water" name="water" value="Water">
-        <label for="water"> Reminders to drink water</label><br>
-        <input type="checkbox" id="food" name="food" value="Food">
-        <label for="food"> Reminders to eat food</label><br>
-        <input type="checkbox" id="sunscreen" name="sunscreen" value="Sunscreen">
-        <label for="sunscreen"> Reminder to (re)apply sunscreen </label><br>
+        <div class="question">
+          <h4> Question 1</h4>
+          <input type="checkbox" id="water" name="water" value="Water">
+          <label for="water"> Reminders to drink water</label><br>
+          <input type="checkbox" id="food" name="food" value="Food">
+          <label for="food"> Reminders to eat food</label><br>
+          <input type="checkbox" id="sunscreen" name="sunscreen" value="Sunscreen">
+          <label for="sunscreen"> Reminder to (re)apply sunscreen </label><br>
+        </div>
 
-        <h4> Question 2 </h4>
-        <label for="duration">How often should the reminders be sent?</label><br>
-        <input type="text" id="duration" name="duration">
+        <div class="question">
+          h4> Question 2 </h4>
+          <label for="duration">How often should the reminders be sent?</label>
+          <input type="text" id="duration" name="duration">
+        </div>
 
         <button type="submit">Submit</button>
 

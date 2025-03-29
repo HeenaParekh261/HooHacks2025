@@ -7,6 +7,19 @@ form{
   text-align: center;
   border-radius: 15px;
   background-color: #d3f0ec;
+  justify-content: center;
+}
+
+.question{
+  border-radius: 15px;
+  background-color: #407C82;
+  padding: 10px;
+  margin: 10px;
+}
+
+.question h4{
+  margin: 10px;
+  padding: 0px;
 }
 
 h1{
