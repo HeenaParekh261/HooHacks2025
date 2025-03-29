@@ -1,3 +1,3 @@
 Citations-- 
 
-https://medium.com/@amitbar131/chat-gpt-api-with-javascript-a-beginners-guide-82416ae76639
+https://medium.com/@amitbar131/chat-gpt-api-with-javascript-a-beginners-guide-82416ae76639node -v
