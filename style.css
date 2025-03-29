@@ -1,1 +1,29 @@
+*{
+  margin: 10px;
+  padding: 10px;
+  font-family: Quicksand, Helvetica, sans-serif;
+  text-align: center; 
+}
 
+form{
+  background-color: #d3f0ec;
+  column-count: 2;
+  column-width: 200px; 
+}
+
+.scheduleForm{
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+}
+
+
+h1, h3, form{
+  font-family: Quicksand, Helvetica, sans-serif;
+}
+
+h3{
+  background-color: #ddf7cb;
+  margin: 20px;
+  border-radius: 15px;
+}
