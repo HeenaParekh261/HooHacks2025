@@ -27,6 +27,38 @@
       <p>In a pickle? Ask a chatbot!</p>
       <!--chatgpt api-->
 
+      <input type="text" id="userInput" placeholder="Type your message here..." />
+      <button onclick="sendMessage()">Send</button>
+
+      <p id="response"></p> <!-- This will display ChatGPT's response -->
+
+      <script>
+          async function sendMessage() {
+              const message = document.getElementById("userInput").value;
+              const responseElement = document.getElementById("response");
+
+              if (!message) {
+                  responseElement.innerText = "Please enter a message.";
+                  return;
+              }
+
+              responseElement.innerText = "Loading..."; // Show loading text
+
+              try {
+                  const res = await fetch("http://localhost:3000/chat", {
+                      method: "POST",
+                      headers: { "Content-Type": "application/json" },
+                      body: JSON.stringify({ message: message })
+                  });
+
+                  const data = await res.json(); // Convert response to JSON
+                  responseElement.innerText = data.choices[0].message.content; // Display ChatGPT's response
+              } catch (error) {
+                  responseElement.innerText = "Error: " + error.message;
+              }
+          }
+      </script>
+
     </main>
     
     <script src="script.js"></script>
