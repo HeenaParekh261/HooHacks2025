@@ -25,8 +25,8 @@
       <h3> While enjoying your hike, it is important to make sure that your are drinking water, consumng water, and not spending excessive time outside in the sun.</h3>
       <h3> Below, you can choose from a list of reminders, or make your own, and set their frequency.</h3>
     
-      <form>
-        <div class="question">
+      <form id="remindForm">
+        <!--<div class="question">
           <h4> Question 1</h4>
           <input type="checkbox" id="water" name="water" value="Water">
           <label for="water"> Reminders to drink water</label><br>
@@ -40,11 +40,39 @@
           <h4> Question 2 </h4>
           <label for="duration">How often should the reminders be sent?</label>
           <input type="text" id="duration" name="duration">
+        </div>-->
+
+        <div class="question">
+          <h4> Reminder 1</h4>
+          <label for="water"> Reminder to drink water</label>
+          <input type="water" id="water" name="water">
+
+          <label for="duration">How often should this reminder be sent?</label>
+          <input type="text" id="duration1" name="duration1">
         </div>
 
-        <button type="submit">Submit</button>
+        <div class="question">
+          <h4> Reminder 2 </h4>
+          <label for="food"> Reminder to eat food</label>
+          <input type="text" id="food" name="food">
+          <label for="duration">How often should this reminder be sent?</label>
+          <input type="text" id="duration2" name="duration2">
+        </div>
+
+        <div class="question">
+          <h4> Reminder 3 </h4>
+          <label for="sunscreen"> Reminder to apply sunscreen</label>
+          <input type="sunscreen" id="sunscreen" name="sunscreen">
+
+          <label for="duration">How often should this reminder be sent?</label>
+          <input type="text" id="duration3" name="duration3">
+        </div>
+
+        <button type="submit">Submit</button> <br>
 
       </form>
+
+      <pre id="output"></pre>
     
     </main>
     

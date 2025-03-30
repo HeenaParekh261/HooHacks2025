@@ -53,3 +53,18 @@ app.post("/chat", async (req, res) => {
 app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);
 });
+
+
+document.getElementById("remindForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+  const water = document.getElementById("water").value;
+  const food = document.getElementById("food").value;
+  const sunscreen = document.getElementById("sunscreen").value;
+  const duration1 = document.getElementById("duration1").value;
+  const duration2 = document.getElementById("duration2").value;
+  const duration3 = document.getElementById("duration3").value;
+
+  const 
+
+  document.getElementById("output").textContent = jsContent;
+}
