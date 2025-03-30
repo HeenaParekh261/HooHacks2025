@@ -63,8 +63,38 @@ document.getElementById("remindForm").addEventListener("submit", function(event)
   const duration1 = document.getElementById("duration1").value;
   const duration2 = document.getElementById("duration2").value;
   const duration3 = document.getElementById("duration3").value;
+};
 
-  const 
-
-  document.getElementById("output").textContent = jsContent;
+function requestNotificationPermission() {
+  if (Notification.permission !== "granted") {
+      Notification.requestPermission().then(function(permission) {
+          if (permission === "granted") {
+              console.log("Notification permission granted.");
+          } else {
+              console.log("Notification permission denied.");
+          }
+      });
+  }
 }
+
+// Function to show a notification
+function showNotification() {
+  if (Notification.permission === "granted") {
+      const notification = new Notification("Hello, Hiker!", {
+          body: "This is your reminder to drink water!",
+          requireInteraction: true, // Optional: keeps the notification until dismissed
+      });
+  } else {
+      console.log("You need to grant permission to see notifications.");
+  }
+}
+
+// Wait for the page to load and then request permission
+window.onload = function() {
+  requestNotificationPermission();
+
+  // Add event listener to show notification when the button is clicked
+  document.getElementById("submit").addEventListener("click", function() {
+      showNotification();
+  });
+};
